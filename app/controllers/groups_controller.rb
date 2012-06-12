@@ -5,6 +5,7 @@ class GroupsController < ApplicationController
 
   def show
 	@group = Group.find(params[:id])
+	puts params
   end
 
   def new

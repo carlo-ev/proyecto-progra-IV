@@ -1,19 +1,21 @@
-<h1>Groups#show</h1>
-<p>Find me in app/views/groups/show.html.erb</p>
+
 <div class="row-fluid">
 	<div class="span2">
-		<%= image_tag @group.logo.url(:medium) %>
-	</div>
-	<div class="span10">
-		<div class="page-header"><h2><%= @group.name %></h2></div>
-
+		<div style="padding-top:40px"><%= image_tag @group.logo.url(:medium) %>
+		</div>
 		<div class="tabbable">
-			<ul class="nav nav-pills">
+			<ul class="nav nav-pills nav-stacked" style="padding-top:40px">
 				<li class="active"><a href="#tab1" data-toggle="tab">News Feed</a></li>
 				<li><a href="#tab2" data-toggle="tab">Info</a></li>
 				<li><a href="#tab3" data-toggle="tab">Members</a></li>
 				<li><a href="#tab4" data-toggle="tab">Events</a></li>
 			</ul>
+		</div>
+	</div>
+	<div class="span10">
+		<div class="page-header"><div class="well"><h1><%= @group.name %></div></h1></div>
+
+		
 
 			<div class="tab-content">
 				<div class="tab-pane active" id="tab1">
@@ -22,11 +24,11 @@
 				</div>
 				<div class="tab-pane" id="tab2">	
 					<div class="well">
-						<label><span class="label">Description</span></label>
+						<label><span class="label label-info">Description</span></label>
 						<p><%= @group.description %></p>
-						<label><span class="label">Category</span></label>
+						<label><span class="label label-info">Category</span></label>
 						<p><%= @group.category.name if @group.category %></p>
-						<label><span class="label">Created in</span></label>
+						<label><span class="label label-info">Created in</span></label>
 						<p><%= @group.created_at %></p>
 					</div>
 				</div>
@@ -50,10 +52,9 @@
 					</div>
 				</div>
 				<div class="tab-pane" id="tab4">
-					<p>Events</p>
+					<div class="well"><p>Events</p></div>
 				</div>		
 			</div>
-		</div>
 		
 	</div>
 
